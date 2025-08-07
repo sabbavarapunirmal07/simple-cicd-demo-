@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic AC Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .ac-control {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            margin:10px;
+            padding:10px 20px;
+            font-size:16px;
+            cursor:pointer;
+        }
+        #on-btn {
+            background-color:green;
+            color:white;
+            border:none;
+        }
+        #off-btn {
+            background-color:red;
+            color:white;
+            border:none;
+        }
+        #status {
+            font-size:18px;
+            font-weight:bold;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ac-control">
+        <h2>Automatic AC Control</h2>
+        <button id="on-btn">Turn On</button>
+        <button id="off-btn">Turn Off</button>
+        <div id="status"></div>
+    </div>
+
+    <script>
+        document.getElementById('on-btn').addEventListener('click', function() {
+            document.getElementById('status').innerText = "AC is On";
+            // Add code to send request to turn on AC
+        });
+        document.getElementById('off-btn').addEventListener('click', function() {
+            document.getElementById('status').innerText = "AC is Off";
+            // Add code to send request to turn off AC
+        });
+    </script>
+</body>
+</html>
